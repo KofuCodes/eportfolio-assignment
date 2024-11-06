@@ -20,7 +20,7 @@ export const Footer = () => {
               <a href="https://facebook.com/ethan.tran.7161" target="_blank"><img src={navIcon2} alt="" /></a>
               <a href="https://instagram.com/kofucodes/profilecard/" target="_blank"><img src={navIcon3} alt="" /></a>
             </div>
-            <p>Copyright 2022. All Rights Reserved</p>
+            <p>Copyright 2024. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
