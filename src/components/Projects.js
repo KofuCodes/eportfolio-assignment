@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
+import { Container, Row, Col, Tab, Nav, Button } from "react-bootstrap";
 import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
@@ -18,33 +18,38 @@ export const Projects = () => {
   const projects = [
     {
       title: "Platformer Game Pt1",
-      description: "A mario remake pirate game",
+      description: "Learn how to create a 2D game with player movement, collision detection, physics, level design, and basic AI.",
       imgUrl: projImg1,
-      link: "https://kofucodes.github.io/platform-game/"
+      link: "https://kofucodes.github.io/platform-game/",
+      downloadLink: "https://drive.google.com/file/d/1EPmXd2DSOZcXy4ozh2wONS55mBU-gzRE/view?usp=sharing" // Add your download link
     },
     {
       title: "Platformer Game Pt2",
-      description: "A metroidvania game created by the foundations of Platformer Game Pt1",
+      description: "Learn how to design interconnected levels, implement character progression with abilities like double-jumping or wall climbing.",
       imgUrl: projImg2,
-      link: "https://kofucodes.github.io/Platformer-Pt2/"
+      link: "https://kofucodes.github.io/Platformer-Pt2/",
+      downloadLink: "https://drive.google.com/file/d/1roQ6PbveR0kVQRvj7GWpLlZ3kk192HaS/view?usp=sharing" // Add your download link
     },
     {
       title: "Ai Mario Game",
-      description: "An ai that can speedrun mario",
+      description: "Learn how to train reinforcement learning models to play games using Proximal Policy Optimization (PPO) and OpenAI Gym.",
       imgUrl: projImg3,
-      link: "https://drive.google.com/file/d/1tXggMtuai-V_WBctVVhZ9_8lQxjKaezA/view?usp=sharing"
+      link: "https://drive.google.com/file/d/1tXggMtuai-V_WBctVVhZ9_8lQxjKaezA/view?usp=sharing",
+      downloadLink: "https://example.com/ai-mario-download" // Add your download link
     },
     {
       title: "Codecademy",
-      description: "A 5 day learning process of different coding languages",
+      description: "A 5-day learning process of different coding languages.",
       imgUrl: projImg4,
-      link: "https://docs.google.com/presentation/d/1R5IQDJMzYV5FlrvKaCsnqSkdDxatMuDu/edit?usp=drive_link&ouid=105758099645583150650&rtpof=true&sd=true"
+      link: "https://docs.google.com/presentation/d/1R5IQDJMzYV5FlrvKaCsnqSkdDxatMuDu/edit?usp=drive_link&ouid=105758099645583150650&rtpof=true&sd=true",
+      downloadLink: "https://docs.google.com/presentation/d/1R5IQDJMzYV5FlrvKaCsnqSkdDxatMuDu/edit?usp=sharing&ouid=105758099645583150650&rtpof=true&sd=true" // Add your download link
     },
     {
       title: "coloradio",
-      description: "An ai that can detect warm and cool colors",
+      description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
       imgUrl: projImg5,
-      link: "https://doubtfull.github.io/Colouraudo/"
+      link: "https://doubtfull.github.io/Colouraudo/",
+      downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
     },
   ];
 
@@ -55,6 +60,12 @@ export const Projects = () => {
 
   const handleProjectClick = (index) => {
     setExpandedProject(expandedProject === index ? null : index);
+
+    // Scroll to the embedded project view
+    const projectElement = document.getElementById(`project-${projects[index].title.replace(/\s+/g, '-').toLowerCase()}`);
+    if (projectElement) {
+      projectElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const getHeaderContent = () => {
@@ -74,20 +85,21 @@ export const Projects = () => {
 
   const ExpandedProjectView = ({ project }) => {
     if (!project) return null;
-  
-    // Check if the project should open externally
+
+    // Check if the project should open externally (for links like Google Drive)
     const openExternally = project.title === "Ai Mario Game";
-  
+
     if (openExternally) {
       // Open in a new tab if `openExternally` is true
       window.open(project.link, '_blank', 'noopener,noreferrer');
       return null;
     }
-  
+
     // Default embedded view for other projects
     return (
       <div 
         className="expanded-project animate__animated animate__fadeIn"
+        id={`project-${project.title.replace(/\s+/g, '-').toLowerCase()}`} // Unique ID for smooth scroll
         style={{
           backgroundColor: '#151515',
           borderRadius: '15px',
@@ -111,9 +123,19 @@ export const Projects = () => {
             }}
           />
         </div>
+        <div className="download-button" style={{ marginTop: '20px' }}>
+          <Button 
+            variant="primary" 
+            href={project.downloadLink} 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Project
+          </Button>
+        </div>
       </div>
     );
-  };  
+  };
 
   return (
     <section className="project" id="projects">
