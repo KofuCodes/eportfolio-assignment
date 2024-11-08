@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/eportfolio-assignment/static/css/main.7778205b.css",
+    "main.js": "/eportfolio-assignment/static/js/main.91b4614d.js",
+    "static/js/787.fb771931.chunk.js": "/eportfolio-assignment/static/js/787.fb771931.chunk.js",
+    "static/media/color-sharp.png": "/eportfolio-assignment/static/media/color-sharp.bea361cfef80fefc2d1e.png",
+    "static/media/color-sharp2.png": "/eportfolio-assignment/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
+    "static/media/project-img4.png": "/eportfolio-assignment/static/media/project-img4.89205e7976ddb4aedf04.png",
+    "static/media/project-img3.png": "/eportfolio-assignment/static/media/project-img3.2f55293f867702190a53.png",
+    "static/media/banner-bg.png": "/eportfolio-assignment/static/media/banner-bg.cc1273af450504afe755.png",
+    "static/media/header-img.svg": "/eportfolio-assignment/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
+    "static/media/resume.png": "/eportfolio-assignment/static/media/resume.bd27eac0fccfa22e2ca3.png",
+    "static/media/CentraNo2-Bold.ttf": "/eportfolio-assignment/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/eportfolio-assignment/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/eportfolio-assignment/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/footer-bg.png": "/eportfolio-assignment/static/media/footer-bg.7bd67c0f73571d0acc02.png",
+    "static/media/contact-img.svg": "/eportfolio-assignment/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
+    "static/media/project-img5.png": "/eportfolio-assignment/static/media/project-img5.3326fc8ab2cf4e0b69cb.png",
+    "static/media/project-img1.png": "/eportfolio-assignment/static/media/project-img1.547d4f37aff0384a3236.png",
+    "static/media/project-img2.png": "/eportfolio-assignment/static/media/project-img2.c25f52cb7c8669355b58.png",
+    "static/media/revicons.eot": "/eportfolio-assignment/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/eportfolio-assignment/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/logo.svg": "/eportfolio-assignment/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/revicons.woff": "/eportfolio-assignment/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/meter2.svg": "/eportfolio-assignment/static/media/meter2.1b8f416eccd1ee162218b8528a1c5cdc.svg",
+    "static/media/meter1.svg": "/eportfolio-assignment/static/media/meter1.c4085ff859afbd8488e9da47d4953850.svg",
+    "static/media/meter3.svg": "/eportfolio-assignment/static/media/meter3.2201f7e4df22bc4b08180210474f28cc.svg",
+    "static/media/nav-icon3.svg": "/eportfolio-assignment/static/media/nav-icon3.08b285abb8e118b52637efa5d65c5367.svg",
+    "index.html": "/eportfolio-assignment/index.html",
+    "static/media/nav-icon1.svg": "/eportfolio-assignment/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
+    "static/media/arrow2.svg": "/eportfolio-assignment/static/media/arrow2.3d9522b6fd8f2464b7200ebf2c1bb09a.svg",
+    "static/media/arrow1.svg": "/eportfolio-assignment/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
+    "static/media/nav-icon2.svg": "/eportfolio-assignment/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
+    "main.7778205b.css.map": "/eportfolio-assignment/static/css/main.7778205b.css.map",
+    "main.91b4614d.js.map": "/eportfolio-assignment/static/js/main.91b4614d.js.map",
+    "787.fb771931.chunk.js.map": "/eportfolio-assignment/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7778205b.css",
+    "static/js/main.91b4614d.js"
+  ]
+}
