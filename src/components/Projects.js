@@ -1,54 +1,60 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { ProjectCard } from "./ProjectCard";
+import ProjectCard from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import resumeImg from "../assets/resume.png";  // Add your resume image path here
+import resumeImg from "../assets/resume.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
-  const [activeTab, setActiveTab] = React.useState('first');
+  const [activeTab, setActiveTab] = useState('first');
+  const [expandedProject, setExpandedProject] = useState(null);
 
   const projects = [
     {
       title: "Platformer Game Pt1",
-      description: "",
+      description: "A mario remake pirate game",
       imgUrl: projImg1,
-      link: "https://drive.google.com/file/d/1EPmXd2DSOZcXy4ozh2wONS55mBU-gzRE/view?usp=drive_link"
+      link: "https://kofucodes.github.io/platform-game/"
     },
     {
       title: "Platformer Game Pt2",
-      description: "",
+      description: "A metroidvania game created by the foundations of Platformer Game Pt1",
       imgUrl: projImg2,
-      link: "https://drive.google.com/file/d/1roQ6PbveR0kVQRvj7GWpLlZ3kk192HaS/view?usp=drive_link"
+      link: "https://kofucodes.github.io/Platformer-Pt2/"
     },
     {
       title: "Ai Mario Game",
-      description: "",
+      description: "An ai that can speedrun mario",
       imgUrl: projImg3,
-      link: "https://drive.google.com/file/d/1tXggMtuai-V_WBctVVhZ9_8lQxjKaezA/view?usp=drive_link"
+      link: "https://drive.google.com/file/d/1tXggMtuai-V_WBctVVhZ9_8lQxjKaezA/view?usp=sharing"
     },
     {
       title: "Codecademy",
-      description: "",
+      description: "A 5 day learning process of different coding languages",
       imgUrl: projImg4,
       link: "https://docs.google.com/presentation/d/1R5IQDJMzYV5FlrvKaCsnqSkdDxatMuDu/edit?usp=drive_link&ouid=105758099645583150650&rtpof=true&sd=true"
     },
     {
       title: "coloradio",
-      description: "",
+      description: "An ai that can detect warm and cool colors",
       imgUrl: projImg5,
-      link: "https://docs.google.com/presentation/d/1R5IQDJMzYV5FlrvKaCsnqSkdDxatMuDu/edit?usp=drive_link&ouid=105758099645583150650&rtpof=true&sd=true"
+      link: "https://doubtfull.github.io/Colouraudo/"
     },
   ];
 
   const handleTabSelect = (key) => {
     setActiveTab(key);
+    setExpandedProject(null); // Close expanded project when switching tabs
+  };
+
+  const handleProjectClick = (index) => {
+    setExpandedProject(expandedProject === index ? null : index);
   };
 
   const getHeaderContent = () => {
@@ -66,6 +72,49 @@ export const Projects = () => {
 
   const { title, description } = getHeaderContent();
 
+  const ExpandedProjectView = ({ project }) => {
+    if (!project) return null;
+  
+    // Check if the project should open externally
+    const openExternally = project.title === "Ai Mario Game";
+  
+    if (openExternally) {
+      // Open in a new tab if `openExternally` is true
+      window.open(project.link, '_blank', 'noopener,noreferrer');
+      return null;
+    }
+  
+    // Default embedded view for other projects
+    return (
+      <div 
+        className="expanded-project animate__animated animate__fadeIn"
+        style={{
+          backgroundColor: '#151515',
+          borderRadius: '15px',
+          padding: '20px',
+          marginTop: '40px',
+          marginBottom: '20px',
+          width: '100%'
+        }}
+      >
+        <h3 style={{ color: 'white', marginBottom: '20px' }}>{project.title}</h3>
+        <div className="embed-responsive embed-responsive-16by9">
+          <iframe
+            className="embed-responsive-item"
+            src={project.link}
+            title={project.title}
+            style={{
+              width: '100%',
+              height: '800px',
+              border: 'none',
+              borderRadius: '10px'
+            }}
+          />
+        </div>
+      </div>
+    );
+  };  
+
   return (
     <section className="project" id="projects">
       <Container>
@@ -79,7 +128,7 @@ export const Projects = () => {
                   <Tab.Container
                     id="projects-tabs"
                     defaultActiveKey="first"
-                    onSelect={handleTabSelect} // Update state on tab switch
+                    onSelect={handleTabSelect}
                   >
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>
@@ -95,15 +144,22 @@ export const Projects = () => {
                     <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {
-                            projects.map((project, index) => (
-                              <ProjectCard
-                                key={index}
-                                {...project}
-                              />
-                            ))
-                          }
+                          {projects.map((project, index) => (
+                            <ProjectCard
+                              key={index}
+                              {...project}
+                              onCardClick={() => handleProjectClick(index)}
+                            />
+                          ))}
                         </Row>
+                        {/* Expanded project view container */}
+                        {expandedProject !== null && (
+                          <Row>
+                            <Col size={12}>
+                              <ExpandedProjectView project={projects[expandedProject]} />
+                            </Col>
+                          </Row>
+                        )}
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
@@ -111,10 +167,9 @@ export const Projects = () => {
                       <Tab.Pane eventKey="third">
                         <div className="resume-section" style={{ textAlign: 'center' }}>
                           <h4>Click on the image to view my resume</h4>
-                          {/* Updated the href to use the relative path from public folder */}
-                          <a href="/assets/Ethan-Tran-Resume.pdf" target="_blank" rel="noopener noreferrer">
+                          <a href="https://flowcv.com/resume/06tss1f8uf" target="_blank" rel="noopener noreferrer">
                             <img
-                              src={resumeImg} // This is the image of your resume
+                              src={resumeImg}
                               alt="My Resume"
                               style={{
                                 width: '100%',
@@ -137,5 +192,5 @@ export const Projects = () => {
       </Container>
       <img className="background-image-right" src={colorSharp2} alt="background" />
     </section>
-  )
+  );
 };

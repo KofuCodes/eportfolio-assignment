@@ -16,7 +16,7 @@ export const Newsletter = ({ status, message, onValidated }) => {
       EMAIL: email
     })
   }
-
+// 
   const clearFields = () => {
     setEmail('');
   }
