@@ -6,6 +6,10 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
 import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
+import projImg8 from "../assets/img/project-img8.png";
+import projImg9 from "../assets/img/project-img9.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import resumeImg from "../assets/resume.png";
 import 'animate.css';
@@ -50,6 +54,34 @@ export const Projects = () => {
       imgUrl: projImg5,
       link: "https://doubtfull.github.io/Colouraudo/",
       downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
+    },
+    {
+      title: "Unity Classroom Simulation",
+      description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
+      imgUrl: projImg6,
+      link: "https://doubtfull.github.io/Colouraudo/",
+      downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
+    },
+    {
+      title: "Unity Cuisine Rush",
+      description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
+      imgUrl: projImg7,
+      link: "https://doubtfull.github.io/Colouraudo/",
+      downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
+    },
+    {
+      title: "Careers with AI",
+      description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
+      imgUrl: projImg8,
+      link: "https://docs.google.com/presentation/d/1qUQhy2sRuABa7g3fqg5SZ7Mlj46yINHWmozNWxYl3os/edit?usp=sharing",
+      downloadLink: "https://docs.google.com/presentation/d/1qUQhy2sRuABa7g3fqg5SZ7Mlj46yINHWmozNWxYl3os/edit?usp=sharing" // Add your download link
+    },
+    {
+      title: "DFD Chart",
+      description: "Learn how to train reinforcement learning models to play games using Proximal Policy Optimization (PPO) and OpenAI Gym.",
+      imgUrl: projImg9,
+      link: "https://drive.google.com/drive/folders/1PU33CRLkOhKsQYeuIFK6BX0wtAqLrX18",
+      downloadLink: "https://example.com/ai-mario-download" // Add your download link
     },
   ];
 
