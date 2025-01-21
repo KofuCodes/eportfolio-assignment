@@ -77,7 +77,7 @@ export const Projects = () => {
       downloadLink: "https://docs.google.com/presentation/d/1qUQhy2sRuABa7g3fqg5SZ7Mlj46yINHWmozNWxYl3os/edit?usp=sharing" // Add your download link
     },
     {
-      title: "DFD Chart",
+      title: "DFD Charts",
       description: "Learn how to train reinforcement learning models to play games using Proximal Policy Optimization (PPO) and OpenAI Gym.",
       imgUrl: projImg9,
       link: "https://drive.google.com/drive/folders/1PU33CRLkOhKsQYeuIFK6BX0wtAqLrX18",
@@ -120,8 +120,15 @@ export const Projects = () => {
 
     // Check if the project should open externally (for links like Google Drive)
     const openExternally = project.title === "Ai Mario Game";
+    const openExternally1 = project.title === "DFD Charts";
 
     if (openExternally) {
+      // Open in a new tab if `openExternally` is true
+      window.open(project.link, '_blank', 'noopener,noreferrer');
+      return null;
+    }
+
+    if (openExternally1) {
       // Open in a new tab if `openExternally` is true
       window.open(project.link, '_blank', 'noopener,noreferrer');
       return null;
