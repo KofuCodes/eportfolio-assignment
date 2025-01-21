@@ -59,15 +59,15 @@ export const Projects = () => {
       title: "Unity Classroom Simulation",
       description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
       imgUrl: projImg6,
-      link: "https://doubtfull.github.io/Colouraudo/",
-      downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
+      link: "https://drive.google.com/file/d/1AoCcxuevdn5C3jhEeg-oVx8TP8ZHOwq8/view?usp=sharing",
+      downloadLink: "https://drive.google.com/file/d/1AoCcxuevdn5C3jhEeg-oVx8TP8ZHOwq8/view?usp=sharing" // Add your download link
     },
     {
       title: "Unity Cuisine Rush",
       description: "Integrate external APIs to analyze color data and categorize colors into warm or cool tones. (click on download link to use camera feature)",
       imgUrl: projImg7,
-      link: "https://doubtfull.github.io/Colouraudo/",
-      downloadLink: "https://doubtfull.github.io/Colouraudo/" // Add your download link
+      link: "https://drive.google.com/file/d/1vFkzabsYYHTEUMmT6dQbVYIxetOvoLV4/view?usp=sharing",
+      downloadLink: "https://drive.google.com/file/d/1vFkzabsYYHTEUMmT6dQbVYIxetOvoLV4/view?usp=sharing" // Add your download link
     },
     {
       title: "Careers with AI",
