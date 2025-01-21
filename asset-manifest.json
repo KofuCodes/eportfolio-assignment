@@ -1,13 +1,17 @@
 {
   "files": {
     "main.css": "/eportfolio-assignment/static/css/main.7778205b.css",
-    "main.js": "/eportfolio-assignment/static/js/main.0058f2c0.js",
+    "main.js": "/eportfolio-assignment/static/js/main.d0d2c29e.js",
     "static/js/787.fb771931.chunk.js": "/eportfolio-assignment/static/js/787.fb771931.chunk.js",
+    "static/media/project-img6.png": "/eportfolio-assignment/static/media/project-img6.63f109133803c07261a8.png",
     "static/media/color-sharp.png": "/eportfolio-assignment/static/media/color-sharp.bea361cfef80fefc2d1e.png",
     "static/media/color-sharp2.png": "/eportfolio-assignment/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
+    "static/media/project-img7.png": "/eportfolio-assignment/static/media/project-img7.296270a47180dc20940b.png",
     "static/media/project-img4.png": "/eportfolio-assignment/static/media/project-img4.89205e7976ddb4aedf04.png",
     "static/media/project-img3.png": "/eportfolio-assignment/static/media/project-img3.2f55293f867702190a53.png",
+    "static/media/project-img9.png": "/eportfolio-assignment/static/media/project-img9.e8d8571a4366709e63d9.png",
     "static/media/banner-bg.png": "/eportfolio-assignment/static/media/banner-bg.cc1273af450504afe755.png",
+    "static/media/project-img8.png": "/eportfolio-assignment/static/media/project-img8.1eec63bdf67001cdb630.png",
     "static/media/header-img.svg": "/eportfolio-assignment/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
     "static/media/resume.png": "/eportfolio-assignment/static/media/resume.bd27eac0fccfa22e2ca3.png",
     "static/media/CentraNo2-Bold.ttf": "/eportfolio-assignment/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
@@ -32,11 +36,11 @@
     "static/media/arrow1.svg": "/eportfolio-assignment/static/media/arrow1.0c89b5b635adf255c2822c630aaa6ccf.svg",
     "static/media/nav-icon2.svg": "/eportfolio-assignment/static/media/nav-icon2.178f497aa17b70c42df2a1a8c926ed01.svg",
     "main.7778205b.css.map": "/eportfolio-assignment/static/css/main.7778205b.css.map",
-    "main.0058f2c0.js.map": "/eportfolio-assignment/static/js/main.0058f2c0.js.map",
+    "main.d0d2c29e.js.map": "/eportfolio-assignment/static/js/main.d0d2c29e.js.map",
     "787.fb771931.chunk.js.map": "/eportfolio-assignment/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7778205b.css",
-    "static/js/main.0058f2c0.js"
+    "static/js/main.d0d2c29e.js"
   ]
 }
